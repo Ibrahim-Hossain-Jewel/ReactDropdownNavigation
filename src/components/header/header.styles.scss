@@ -3,34 +3,83 @@
     padding: 0;
     outline: 0;
 }
+.header{
+    box-shadow: .5px .5px 2px gray;
+}
+
 $navBackground : #ffffff;
 $navFontColor : #0A186E;
-.gridContainer{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-bottom: 1px solid gray;
-}
-.options{
-    background-color: $navBackground;
-    width: 95%;
-    margin: 0 auto;
-    
-}
-.dropdownHeader{
-    
-}
-.option{
+
+@mixin top-menu {
     font-size: 16px;
     display: inline-block;
     cursor: pointer;
-    padding: 24px 24px;
     font-weight: 600;
     font-style: normal;
     ;
-    line-height: 3rem;
+    padding: 0px 30px;
+    line-height: 5rem;
     color: $navFontColor;
     text-decoration: none;
     &:hover{
             background-color: #F0F0F0;
      }
+    //this position for the currnet class
+    
+}
+
+.menu1{
+    @include top-menu;
+    
+}
+.menu2{
+    @include top-menu;
+    position: relative;
+}
+//this code segment for the underline bar;
+
+.current::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #0A186E;
+}
+.menu3{
+    @include top-menu;
+    position: relative;
+}
+.menu4{
+    @include top-menu;
+    position: relative;
+}
+.menu5{
+    @include top-menu;
+    position: relative;
+}
+.otherPropsSection{
+    @include top-menu;
+}
+.logoSection{
+    @include top-menu;
+}
+.menu-row{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.options{
+    background-color: $navBackground;
+    width: 95%;
+    margin: 0 auto;
 }

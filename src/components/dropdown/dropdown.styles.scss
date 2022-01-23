@@ -3,26 +3,84 @@
     padding: 0;
     outline: 0ch;
 }
-
-.dd-header-title{
-    display: inline-block;
+//Creating a mixin module for each list item.
+@mixin listItem-style {
+    width: 330px;
+    text-indent: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    &:hover{
+        color: #0055ff;
+        background-color: #F0F0F0;
+        width: 330px;
+        cursor: pointer;
+        border-radius: 8px 0px 0px 8px;
+    }
 }
 
+.advisoryconsulting{
+    @include listItem-style;
+    line-height: 3rem;
+}
+.cloudservices{
+    @include listItem-style;
+    line-height: 3rem;
+}
+.contactcenters{
+    @include listItem-style;
+    line-height: 3rem;
+}
+.customerexperience{
+    @include listItem-style;
+    line-height: 3rem;
+}
+.dataanalytics{
+    @include listItem-style;
+    line-height: 3rem;
+}
+.datacenter{
+    @include listItem-style;
+    line-height: 3rem;
+}
+.dd-header-title{
+    display: inline-block;
+    position: relative;
+}
+.current::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #0A186E;
+}
+
+//this code segment for list active menu.
+.is-active{
+    color: white;
+    background-color: #0055ff;
+    border-radius: 8px 0px 0px 8px;
+}
 .dd-list{
     list-style: none;
+    padding-top: 15px;
     position: absolute;
     left: 30px;
-    top: 97px;
+    top: 81px;
     background-color: #ffffff;
-    box-shadow: .5px .5px 3px gray;
+    box-shadow: .5px .5px 2px gray;
     border-radius: 5px;
-    width:95%;
+    // width:95%;
     cursor:default;
 }
 .list-container{
     padding-left: 14px;
     list-style: none;
-    
+    display: flex;
+    justify-content: space-between;
 }
 .dd-list-item{
     width: 330px;
@@ -32,6 +90,7 @@
         background-color: #F0F0F0;
         width: 330px;
         cursor: pointer;
+        border-radius: 8px 0px 0px 8px;
     }
 }
 .dropDownRightArrow{
