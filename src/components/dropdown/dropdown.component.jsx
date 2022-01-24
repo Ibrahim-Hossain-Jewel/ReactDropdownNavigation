@@ -40,7 +40,7 @@ class Dropdown extends React.Component{
                 {listOpen && <ul className="dd-list">
                 {list.map((item) => (
                     <ul className="list-container" key={item.id}>
-                          <NavLink to={item.cName} className={item.cName} activeClassName="is-active">
+                          <NavLink to={item.path} className={item.cName} activeClassName="is-active">
                             <li className={item.cName} key={item.id}>
                               {item.title}
                               <span className="dropDownRightArrow"> <FaAngleRight /> </span> 
