@@ -32,12 +32,10 @@ class Dropdown extends React.Component{
           <div className="dd-wrapper">
             <div className="dd-header" onClick={() => this.toggleList()}>
                 <div className = "dd-header-title">
-                  <NavLink to="/home" activeClassName="current">
                     {headerTitle}
-                  </NavLink>
                 </div>
             </div>
-                {listOpen && <ul className="dd-list">
+                {listOpen && <ul className="dd-list solution">
                 {list.map((item) => (
                     <ul className="list-container" key={item.id}>
                           <NavLink to={item.path} className={item.cName} activeClassName="is-active">

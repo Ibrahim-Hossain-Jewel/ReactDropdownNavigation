@@ -44,7 +44,18 @@
 }
 .dd-header-title{
     display: inline-block;
-    position: relative;
+    
+}
+.solution::after{
+    content: "";
+    width: 40%;
+    position: absolute;
+    left: 291px;
+    right: 0px;
+    bottom: 304px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #0A186E;
 }
 .current::after{
     content: "";
