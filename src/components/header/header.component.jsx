@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './header.styles.scss';
 import Dropdown from "../dropdown/dropdown.component";
-
+import CollectionItem from '../services-collections/service-collection.component';
 class Header extends React.Component{
     constructor(props){
         super(props);
@@ -70,29 +70,21 @@ class Header extends React.Component{
                         <div className="logoSection">Logo</div>
                         <div className="menuSection">
                             <ul className="menu-row">
-                                <li className="menu1">
+                                <div className="menu1">
                                     <Dropdown title = "Solutions" list = {this.state.location} />
-                                </li>
-                                <li className="menu2">
-                                    <NavLink to = '/industries' style={{textDecoration: 'none'}} activeClassName = "current">
-                                        <li>Industries</li>
-                                    </NavLink>
-                                </li>
-                                <li className="menu3">
-                                    <NavLink to = '/discover' style={{textDecoration: 'none'}} activeClassName = "current">
-                                        <li>Discover</li>
-                                    </NavLink>
-                                </li>
-                                <li className="menu4">
-                                    <NavLink to = '/aboutUs' style={{textDecoration: 'none'}} activeClassName="current">
-                                        <li>About Us</li>
-                                    </NavLink>
-                                </li>
-                                <li className="menu5">
-                                    <NavLink to = '/careers' style={{textDecoration: 'none'}} activeClassName="current">
-                                        <li>Careers</li>
-                                    </NavLink>
-                                </li>
+                                </div>
+                                <div className="menu2">
+                                    <li>Industries</li>
+                                </div>
+                                <div className="menu3">
+                                    <li>Discover</li>
+                                </div>
+                                <div className="menu4">
+                                    <li>About Us</li>
+                                </div>
+                                <div className="menu5">
+                                    <li>Careers</li>
+                                </div>
                             </ul>
                         </div>
                         <div className="otherPropsSection">Hello world </div>

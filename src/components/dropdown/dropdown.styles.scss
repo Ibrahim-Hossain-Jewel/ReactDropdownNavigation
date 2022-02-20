@@ -42,9 +42,14 @@
     @include listItem-style;
     line-height: 3rem;
 }
+//dropdownright css;
+.dropdownright{
+    position: absolute;
+    right: -100px;
+}
+
 .dd-header-title{
     display: inline-block;
-    
 }
 .solution::after{
     content: "";

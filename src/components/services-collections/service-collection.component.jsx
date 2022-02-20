@@ -2,7 +2,7 @@ import React from "react";
 import './service-collection.scss';
 import PrintCollection from "../view-colletion/view-collection.component";
 
-class collectionItem extends React.Component{
+class CollectionItem extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -41,4 +41,4 @@ class collectionItem extends React.Component{
         );
     }
 }
-export default collectionItem;
+export default CollectionItem;
